@@ -1,0 +1,18 @@
+Gameplay Functionality Decisions:
+
+- The grid has an area that limits the max zone it can occupy. So the size of the elements always try to addapt to the height or that width of the grid area limit.
+  Another option would be that the element size can be smaller but not bigger, so if there's enough space, the elements aren't too big.
+
+- I was a bit confused, because in games like this, you can only make matchables pop if they're connected with at least another one. 
+  But following the documentation I worked popping alone matchables too.
+
+System decisions:
+
+- I decided to create a little manager system, that will be created since the start of the app, to control different aspects of the game like input.
+  They're easy to access and gives us the chance to don't duplicate code from the same system in different parts of the game.
+
+- In a final build of the project, it starts in the splashscreen to load every needed asset etc. For Testing purposes, every scene has a MainController that won't do anything if it has already been created.
+
+- I didn't know how much to keep working on non gameplay features, like UI or the managers.
+  
+- In a larger project, I would change systems like the scenes and asset control, using addressables to keep better track of the memory. 
